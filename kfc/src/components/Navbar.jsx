@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import Home from "../pages/Home";
 
 
 
-
-function Home(){
+function Navbar(){
     return (
         <div style={{display:"flex",marginTop:"30px"}}>
        <div style={{display:'flex',marginLeft:"200px",gap:"30px"}}>
@@ -23,6 +24,7 @@ function Home(){
                 <h4 style={{color:"black"}}>Sign In</h4>
             </div>
         </Link>
+
         <Link to="/cart">
         <div style={{display:"flex",gap:"10px",marginLeft:"600px",marginTop:"-50px"}}>
         <p style={{color:"black"}}>$ 0</p>
@@ -32,15 +34,7 @@ function Home(){
             </div>
         </Link>
        </div>
-
-
-
-
-
-
-
-
         </div>
     )
 }
-export default Home
+export default Navbar;

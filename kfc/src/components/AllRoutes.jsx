@@ -1,10 +1,11 @@
 import React from "react";
 import {Routes,Route} from "react-router-dom";
-import Home from "./Navbar";
 import Login from "../pages/Login";
 import Products from "../pages/Products";
 import Deals from "../pages/Deals";
 import Menu from "../pages/Menu";
+
+import Home from "../pages/Home";
 
 function AllRoutes(){
 
