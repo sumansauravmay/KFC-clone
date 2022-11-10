@@ -47,7 +47,7 @@ function SampleNextArrow(props) {
       <div
         className={className}
         style={{ ...style, display: "block", background: "grey",marginRight:"60px",
-        marginTop:"0px",padding:"10px",borderRadius:"20px" }}
+        marginTop:"5px",padding:"0px",borderRadius:"20px" }}
         onClick={onClick}
       />
     );
@@ -89,12 +89,13 @@ function Slick(){
             <img className="imagest" src={item.image} alt="offers"/>
 <div style={{background:"white",marginTop:"-15px",width:"300px",height:"150px"}}>
             <div style={{background:"white"}}>
-            <p style={{width:"300px"}}>{item.description}</p>
+            <p style={{width:"300px",marginTop:"15px"}}>{item.description}</p>
             </div>
            
             <div style={{display:"flex",background:"white"}}>
             <p style={{marginLeft:"10px"}}>{item.title}</p>
-            <button style={{borderRadius:"30px",width:"100px",marginTop:"0px",marginLeft:"70px"}}>{item.des}</button>
+            <button style={{borderRadius:"30px",width:"100px",marginTop:"0px",marginLeft:"70px"}}>
+            {item.des}</button>
             </div>
             </div>
             </div>

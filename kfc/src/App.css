@@ -39,12 +39,13 @@
 .imagest{
   width:300px;
   margin-left:"100px";
-  border:"1px solid red" 
+  border:"1px solid red" ;
+ 
 }
 .detailsCol{
   width:50%;
   margin-left:50px;
- 
+  margin-bottom: "-50px";
  
 }
 
@@ -52,7 +53,8 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(2,200px);
-  width:200px;
+  width:1000px;
   margin-left:150px;
+  margin-top: 80px;
   
 }

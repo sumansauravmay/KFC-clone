@@ -47,7 +47,7 @@ function Home(){
 {
     data.map((item)=>(
        <div key={item.id}>
-<img
+<img style={{marginTop:"50px"}}
 src={item.img} alt="head"/>
        </div>
     ))
@@ -56,59 +56,59 @@ src={item.img} alt="head"/>
         <div>
 
         </div>
-        <h1 style={{marginLeft:"-700px"}}>Welcome to KFC!</h1>
+        <h1 style={{marginLeft:"-700px",fontWeight:"bolder",fontSize:"30px"}}>Welcome to KFC!</h1>
 {/* 2nd div */}
         <div>
-        <h1 style={{marginLeft:"-700px"}}>BROWSE CATEGORIES</h1>
+        <h1 style={{marginLeft:"-700px",fontWeight:"bolder",fontSize:"30px",marginTop:"80px"}}>BROWSE CATEGORIES</h1>
 
 
 <div className="detailsPage">
    <div>
-    <img style={{width:"250px",height:"200px"}}
+    <img style={{width:"800px",height:"200px"}}
     src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT115.jpg?ver=21.88" alt="img1"/>
-    <h2>HOT DEALS</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>HOT DEALS</h2>
    </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px"}}
+<img style={{width:"800px",height:"200px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT116.jpg?ver=21.88" alt="img2"/>
-    <h2>CHICKEN BUCKETS</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>CHICKEN BUCKETS</h2>
 </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px"}}
+<img style={{width:"800px",height:"200px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT201.jpg?ver=21.88" alt="img1"/>
-    <h2>HOT LUNCHES</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>HOT LUNCHES</h2>
 </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px"}}
+<img style={{width:"800px",height:"200px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT84.jpg?ver=21.88" alt="img1"/>
-    <h2>BOX MEALS</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>BOX MEALS</h2>
 </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px",marginTop:"70px"}}
+<img style={{width:"800px",height:"200px",marginTop:"70px"}}
  src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT99.jpg?ver=21.88" alt="img1"/>
-    <h2>BURGERS</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>BURGERS</h2>
 </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px",marginTop:"70px"}}
+<img style={{width:"800px",height:"200px",marginTop:"70px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT189.jpg?ver=21.88" alt="img1"/>
-    <h2>BIRYANI BUCKETS</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>BIRYANI BUCKETS</h2>
 </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px",marginTop:"70px"}}
+<img style={{width:"800px",height:"200px",marginTop:"70px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT175.jpg?ver=21.88" alt="img1"/>
-    <h2>SNACK</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>SNACK</h2>
 </div>
 
 <div style={{marginLeft:"15px"}}>
-<img style={{width:"250px",height:"200px",marginTop:"70px"}}
+<img style={{width:"800px",height:"200px",marginTop:"70px"}}
 src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt="img1"/>
-    <h2>VIEW ALL MENU</h2>
+    <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>VIEW ALL MENU</h2>
 </div>
 
 </div>

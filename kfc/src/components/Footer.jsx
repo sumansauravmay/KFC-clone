@@ -1,14 +1,20 @@
 import React from "react";
 import Slick from "./Slider";
+// import {useNavigate} from "react-router-dom"
 
 function Footer(){
+    // const navigate = useNavigate();
+
+    
+
     return (
         <div style={{background:"black",marginTop:"200px"}}>
 
 <div>
 <div style={{color:"white",display:"flex"}}>
-    <h1 style={{marginLeft:"100px"}}>OFFERS & DEALS</h1>
-    <p style={{marginLeft:"600px",fontSize:"20px",marginTop:"30px"}}>View All Deals</p>
+    <h1 style={{marginLeft:"100px",fontWeight:"bold",fontSize:"30px"}}>OFFERS & DEALS</h1>
+
+    <p style={{marginLeft:"600px",fontSize:"20px",marginTop:"0px"}}>View All Deals</p>
 </div>
 <Slick/>
 
@@ -16,11 +22,11 @@ function Footer(){
 
 
 {/* //footer */}
- <div  style={{display:"flex",marginTop:"200px",color:"white"}}>
+ <div  style={{display:"flex",marginTop:"100px",color:"white",height:"200px"}}>
  <div>
-    <img style={{marginLeft:"60px",padding:"10px",marginTop:"10px"}} src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="footerKFC"/>
+    <img style={{marginLeft:"40px",padding:"10px",marginTop:"10px"}} src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="footerKFC"/>
  </div>
-        <div>
+        <div style={{marginLeft:"100px"}}>
         <ul>
                 <li>KFC Food</li>
                 <li>Menu</li>
@@ -30,7 +36,7 @@ function Footer(){
             </ul>
         </div>
             
-        <div>
+        <div style={{marginLeft:"25px"}}>
         <ul>
                 <li>Support</li>
                 <li>Get Help</li>
@@ -40,7 +46,7 @@ function Footer(){
             </ul>
         </div>
 
-        <div>
+        <div style={{marginLeft:"25px"}}>
         <ul>
                 <li>Legal</li>
                 <li>Terms and Conditions</li>
@@ -50,7 +56,7 @@ function Footer(){
             </ul>
         </div>
 
-        <div>
+        <div style={{marginLeft:"25px"}}>
         <ul>
                 <li>KFC India</li>
                 <li>About KFC</li>
@@ -61,7 +67,7 @@ function Footer(){
         </div>
 
 <div style={{display:"flex",marginLeft:"10px"}}>
-    <img style={{width:"30px",marginTop:"20px",height:"30px"}} src="https://images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt="map"/>
+    <img style={{width:"30px",marginTop:"0px",height:"30px"}} src="https://images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt="map"/>
     <p style={{fontSize:"16px",width:"80px",marginLeft:"7px"}}>Find a KFC</p>
 </div>
 
@@ -74,9 +80,9 @@ function Footer(){
    </div>   
         </div>
 
-<div style={{display:"flex"}}>
+<div style={{display:"flex",marginTop:"20px"}}>
 
-<p style={{color:'white',marginLeft:"400px"}}>Copyright © KFC Corporation 2021 All Rights Reserved</p>
+<p style={{color:'white',marginLeft:"400px",padding:"10px"}}>Copyright © KFC Corporation 2021 All Rights Reserved</p>
 
 <img style={{marginLeft:"300px"}} 
 src="https://images.ctfassets.net/wtodlh47qxpt/4ZHyPA2EeaoP3aqtNDriBA/463462a9c27b0aa585e12b21ce3766e0/Social_Insta_White.svg" alt="insta"/>
@@ -87,8 +93,6 @@ src="https://images.ctfassets.net/wtodlh47qxpt/dKiu2meLcfz2DNwsg7nZw/7194830b1ba
 <img style={{marginLeft:"10px"}}
 src="https://images.ctfassets.net/wtodlh47qxpt/78z9x0WwdkdXwGVK726EKX/6599ca34ec88e2a6f46d7d94ed85a8ad/Social_Twitter_White.svg" alt=""/>
 </div>
-
-
 
         </div>
        

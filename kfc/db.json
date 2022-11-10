@@ -1,5 +1,9 @@
 {
-    "Products":[
-        {}
+    "register":[
+        {
+            "name":"suman saurav",
+            "email":"suman@gmail.com",
+            "number":"7654839189"
+        }
     ]
 }
