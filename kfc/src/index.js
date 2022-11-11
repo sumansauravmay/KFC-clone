@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CartContextProvider from "./Context/CartContext/CartContextProvider"
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
   <BrowserRouter>
-    <App />
+  <CartContextProvider>
+  <App />
+  </CartContextProvider>
+    
   </BrowserRouter>
   </ChakraProvider>
 );
