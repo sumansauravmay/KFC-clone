@@ -7,43 +7,49 @@ import axios from "axios";
 
 
 function Login(){
+    const navigate = useNavigate();
+
 const [name,setName]=React.useState("")
 const [email,setEmail]=React.useState("")
 const [number,setNumber]=React.useState("")
-
-    const navigate = useNavigate();
-
+const [status,setStatus]=React.useState(false)
 
     const getData={
         name:name,
        email:email,
-      number:number
-      
+      number:number 
       }
-
-
-const handleHomePage=()=>{
-
-   return navigate("/");
-}
 
 const handleRegister=()=>{
     return axios({
         method:"POST",
-        url:"http://localhost:3001/register",
+        url:"http://localhost:4000/register",
         data:getData
-    }).then((res)=>{
-console.log(res)
-// setToken(Date.now())
+    })
+    .then((res)=>{
+console.log("res",res)
+setStatus(true)
 alert("Sign up successfull")
-// setStatus(true)
+
     })
     .catch((err)=>{
-        // setStatus(false)
-        console.log(err)
-        alert("something went wrong")
+        setStatus(false)
+        console.log("err",err)
     })
 }
+
+if(status)
+{
+    return navigate("/")
+}
+
+
+
+const handleHomePage=()=>{
+
+    return navigate("/");
+ }
+
 
 
     return (
@@ -54,28 +60,29 @@ alert("Sign up successfull")
         src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="kfc"/>
 
         <h1 style={{fontWeight:"bold",fontSize:"20px",width:"550px",marginLeft:"400px",marginTop:"30px"}}>
-        LET’S SIGN IN OR CREATE ACCOUNT WITH YOUR PHONE NUMBER!</h1>
+        LET'S SIGN IN OR CREATE ACCOUNT WITH YOUR PHONE NUMBER!</h1>
 
         
 
-        <Input value={number} onChange={(e)=>setNumber(e.target.value)}
+        <Input type="text" value={number} onChange={(e)=>setNumber(e.target.value)}
         style={{width:"35%",marginTop:"100px"}}
-        variant='flushed' placeholder='Enter Mobile Number' type="number"/>
+        variant='flushed' placeholder='Enter Mobile Number'/>
 <br/>
-<Input value={name} onChange={(e)=>setName(e.target.value)}
+<Input type="text" value={name} onChange={(e)=>setName(e.target.value)}
         style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Name' type="name"/>
+        variant='flushed' placeholder='Enter Name'/>
 <br/>
-<Input value={email} onChange={(e)=>setEmail(e.target.value)}
+<Input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}
         style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Email ' type="email"/>
+        variant='flushed' placeholder='Enter Email' />
 
         <p style={{fontSize:"14px",marginTop:"20px"}}>By “logging in to KFC”, you agree to our Privacy Policy and Terms & Conditions.</p>
 
         {/* <input type="submit" value="Send Me a Code"/> */}
-<Button style={{background:"black",marginTop:"20px",color:"white",borderRadius:"20px"}}
- onClick={handleRegister}>
-Send Me a Code</Button>
+    <button 
+   style={{background:"black",color:"white",width:"200px",height:"40px",margin:"20px",borderRadius:"30px"}}
+    onClick={handleRegister}>Send Me Code</button>
+  
        
 
        <p style={{marginTop:"20px"}}>or</p>

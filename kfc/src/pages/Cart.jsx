@@ -1,10 +1,10 @@
 import React from "react";
 
-function Deals(){
+function Cart(){
     return (
         <>
-            <h1>Deals</h1>
+            <h1>Cart</h1>
         </>
     )
 }
-export default Deals;
+export default Cart;

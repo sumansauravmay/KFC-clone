@@ -3,6 +3,7 @@ import '../App.css';
 import Slider from "react-slick";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const data=[
     {
@@ -64,15 +65,19 @@ src={item.img} alt="head"/>
 
 <div className="detailsPage">
    <div>
+   <Link to="hotdeals">
     <img style={{width:"800px",height:"200px"}}
     src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT115.jpg?ver=21.88" alt="img1"/>
     <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>HOT DEALS</h2>
+    </Link>
    </div>
 
 <div style={{marginLeft:"15px"}}>
+<Link to="/chicken">
 <img style={{width:"800px",height:"200px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT116.jpg?ver=21.88" alt="img2"/>
     <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>CHICKEN BUCKETS</h2>
+    </Link>
 </div>
 
 <div style={{marginLeft:"15px"}}>
@@ -88,15 +93,19 @@ src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/image
 </div>
 
 <div style={{marginLeft:"15px"}}>
+<Link to="/burgers">
 <img style={{width:"800px",height:"200px",marginTop:"70px"}}
  src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT99.jpg?ver=21.88" alt="img1"/>
     <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>BURGERS</h2>
+    </Link>
 </div>
 
 <div style={{marginLeft:"15px"}}>
+<Link to="/biryani">
 <img style={{width:"800px",height:"200px",marginTop:"70px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT189.jpg?ver=21.88" alt="img1"/>
     <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>BIRYANI BUCKETS</h2>
+    </Link>
 </div>
 
 <div style={{marginLeft:"15px"}}>
