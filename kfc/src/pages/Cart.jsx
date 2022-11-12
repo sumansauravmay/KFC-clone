@@ -4,7 +4,6 @@ import { CartContext } from "../Context/CartContext/CartContextProvider";
 import { checkout,removeFromCart } from "../Context/CartContext/action";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-//  import {Alert} from "@chakra-ui/react"
 
 
 const Cart = () => {

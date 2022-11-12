@@ -66,7 +66,9 @@ function Footer(){
                 <li>About KFC</li>
                 <li>KFC Care</li>
                 <li>Careers</li>
-                <li>Our Golden Past</li>
+                <Link to="adminlogin">
+                <li>ADMIN LOGIN</li>
+                </Link>
             </ul>
         </div>
 

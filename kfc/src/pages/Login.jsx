@@ -1,5 +1,5 @@
 import React from "react";
-import {Input,Button} from "@chakra-ui/react";
+import {Input,Button,PinInput,PinInputField} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
@@ -7,22 +7,35 @@ import axios from "axios";
 function Login(){
     const navigate = useNavigate();
 
-const [number,setNumber]=React.useState("")
+const [phoneNumber,setPhoneNumber]=React.useState("")
+const [name,setName]=React.useState("")
+const [email,setEmail]=React.useState("")
+const [otp,setOtp]=React.useState()
+const [loading,setLoading]=React.useState(false)
 
-    const getData={
-       number : number
-      }
+
+const handleOtp=(e)=>{
+setOtp(e.target.value)
+}
+
+const handleOtpFunc=()=>{
+    console.log(otp)
+    setOtp("8251")
+    return navigate("/")
+}
 
 const handleRegister=()=>{
+    setLoading(true)
     return axios({
         method:"POST",
         url:"http://localhost:4000/register",
-        data:getData
+        data:{phoneNumber,name,email}
     })
+
     .then((res)=>{
 console.log("res",res)
-
-alert("Sign up successfull")
+setLoading(false)
+alert(`Your OTP is 8251`)
 
     })
     .catch((err)=>{
@@ -34,38 +47,60 @@ const handleHomePage=()=>{
     return navigate("/");
  }
 
+ if(loading)
+ {
+  return <img 
+  style={{marginLeft:"400px",widht:"200px",height:"500px"}} 
+  src="https://online.kfc.co.in/KFC_Loader_Gif.gif" alt="loading"/>
+ }
+
+
     return (
         <>
             <p style={{fontWeight:"bold",marginTop:"20px"}}>Sign in / sign up</p>
 
         <img style={{marginLeft:"650px",marginTop:"40px"}}
         src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="kfc"/>
-
+   
         <h1 style={{fontWeight:"bold",fontSize:"20px",width:"550px",marginLeft:"400px",marginTop:"30px"}}>
         LET'S SIGN IN OR CREATE ACCOUNT WITH YOUR PHONE NUMBER!</h1>
 
         
 
-        <Input type="text" value={number} onChange={(e)=>setNumber(e.target.value)}
+        <Input type="number" value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)}
         style={{width:"35%",marginTop:"100px"}}
         variant='flushed' placeholder='Enter Mobile Number'/>
  <br/>
-{/* <Input type="text" value={name} onChange={(e)=>setName(e.target.value)}
+<Input type="text" value={name} onChange={(e)=>setName(e.target.value)}
         style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Name'/> */}
-{/* <br/>
+        variant='flushed' placeholder='Enter Name'/> 
+<br/>
 <Input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}
         style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Email' />  */}
+        variant='flushed' placeholder='Enter Email' /> 
 
-        <p style={{fontSize:"14px",marginTop:"20px"}}>By “logging in to KFC”, you agree to our Privacy Policy and Terms & Conditions.</p>
+ <p style={{fontSize:"14px",marginTop:"20px"}}>By “logging in to KFC”, you agree to our Privacy Policy and Terms & Conditions.</p>
 
     
     <button 
    style={{background:"black",color:"white",width:"200px",height:"40px",margin:"20px",borderRadius:"30px"}}
     onClick={handleRegister}>Send Me Code</button>
   
-       
+      <br/>
+      <br/>
+      <PinInput>
+  <PinInputField style={{marginLeft:"10px"}}  onChange={handleOtp}/>
+  <PinInputField style={{marginLeft:"10px"}}  onChange={handleOtp}/>
+  <PinInputField style={{marginLeft:"10px"}} onChange={handleOtp}/>
+  <PinInputField style={{marginLeft:"10px"}} onChange={handleOtp}/>
+</PinInput>
+<br/>
+<br/>
+
+<button 
+   style={{background:"black",color:"white",width:"200px",height:"40px",margin:"20px",borderRadius:"30px"}}
+    onClick={handleOtpFunc}>Enter OTP</button>
+  
 
        <p style={{marginTop:"20px"}}>or</p>
 
@@ -79,4 +114,4 @@ Skip, Continue As Guest</Button>
         </>
     )
 }
-export default Login
+export default Login;

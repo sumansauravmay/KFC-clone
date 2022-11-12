@@ -8,6 +8,8 @@ import Biryani from "../pages/Biryani";
 import HotDeals from "../pages/HotDeals";
 import Cart from "../pages/Cart";
 import Menu from "../pages/Menu";
+import AdminLogin from "../pages/AdminLogin";
+import AdminPage from "../pages/AdminPage";
 
 function AllRoutes(){
 
@@ -22,6 +24,8 @@ function AllRoutes(){
                 <Route path="/hotdeals" element={<HotDeals/>}></Route>
                 <Route path="/cart" element={<Cart/>}></Route>
                 <Route path="/menu" element={<Menu/>}></Route>
+                <Route path="/adminlogin" element={<AdminLogin/>}></Route>
+                <Route path="/adminpage" element={<AdminPage/>}></Route>
             </Routes>
         </div>
     )

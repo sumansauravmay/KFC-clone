@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const data=[
     {
@@ -26,7 +27,24 @@ const data=[
     }
 ]
 
+const getData=()=>{
+    return axios.get(`http://localhost:4000/register`)
+}
+
 function Home(){
+
+const [user,setUser]=React.useState([])
+
+React.useEffect(()=>{
+getData()
+.then((res)=>{
+    console.log(res.data)
+    setUser(res.data)
+})
+})
+
+
+
 
     var settings = {
         dots: false,
@@ -54,13 +72,23 @@ src={item.img} alt="head"/>
     ))
 }
 </Slider>
-        <div>
 
+        <div style={{display:"flex"}}>  
+        <h1 style={{marginLeft:"210px",fontWeight:"bolder",fontSize:"30px"}}>Welcome to KFC</h1>
+        {
+           user.map((el)=>(
+            <h1 key={el.id}
+            style={{marginLeft:"0px",fontWeight:"bolder",fontSize:"30px"}}>
+            , {el.name}
+        </h1>
+           )) 
+        }
         </div>
-        <h1 style={{marginLeft:"-700px",fontWeight:"bolder",fontSize:"30px"}}>Welcome to KFC!</h1>
+       
+       
 {/* 2nd div */}
         <div>
-        <h1 style={{marginLeft:"-700px",fontWeight:"bolder",fontSize:"30px",marginTop:"80px"}}>BROWSE CATEGORIES</h1>
+        <h1 style={{marginLeft:"-620px",fontWeight:"bolder",fontSize:"30px",marginTop:"80px"}}>BROWSE CATEGORIES</h1>
 
 
 <div className="detailsPage">
