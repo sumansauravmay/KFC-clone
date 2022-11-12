@@ -5,6 +5,7 @@ import {CartContext} from "../Context/CartContext/CartContextProvider";
 // import {Button} from "@chakra-ui/react";
 import "../App.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const getData=()=>{
@@ -71,6 +72,7 @@ if(loading)
                 ))
             }
         </div>
+        <Footer/>
         </div>
     )
 }

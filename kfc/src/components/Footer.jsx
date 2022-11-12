@@ -1,12 +1,10 @@
 import React from "react";
 import Slick from "./Slider";
-// import {useNavigate} from "react-router-dom"
+import {Link} from "react-router-dom";
+
 
 function Footer(){
-    // const navigate = useNavigate();
-
     
-
     return (
         <div style={{background:"black",marginTop:"200px"}}>
 
@@ -24,13 +22,19 @@ function Footer(){
 {/* //footer */}
  <div  style={{display:"flex",marginTop:"100px",color:"white",height:"200px"}}>
  <div>
+ <Link to="/">
     <img style={{marginLeft:"40px",padding:"10px",marginTop:"10px"}} src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="footerKFC"/>
+    </Link>
  </div>
         <div style={{marginLeft:"100px"}}>
         <ul>
                 <li>KFC Food</li>
+                <Link to="/burgers">
                 <li>Menu</li>
+                </Link>
+                <Link to="/cart">
                 <li>Order Lookup</li>
+                </Link>
                 <li>Gift Card</li>
                 <li>Nutrition & Allergen</li>
             </ul>

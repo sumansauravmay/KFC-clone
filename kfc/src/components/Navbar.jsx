@@ -26,13 +26,14 @@ if(loading)
 
     return (
         <div style={{display:"flex",marginTop:"30px"}}>
-       <div style={{display:'flex',marginLeft:"200px",gap:"30px"}}>
+       <div style={{display:'flex',marginLeft:"200px",gap:"30px"
+       }}>
         <Link to="/">
             <img 
             src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" 
             alt="suman"/>
         </Link>
-        <Link to="/burgers" style={{color:"black",fontWeight:"bold"}}>Menu</Link>
+        <Link to="/menu" style={{color:"black",fontWeight:"bold"}}>Menu</Link>
         <Link to="/hotdeals" style={{color:"black",fontWeight:"bold"}}>Deals</Link>
        </div>
 

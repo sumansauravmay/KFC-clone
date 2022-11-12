@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-
+import Footer from "../components/Footer";
 import {CartContext} from "../Context/CartContext/CartContextProvider";
    import {addToCart} from "../Context/CartContext/action";
 
@@ -68,6 +68,7 @@ if(loading)
                 ))
             }
         </div>
+        <Footer/>
         </div>
     )
 }

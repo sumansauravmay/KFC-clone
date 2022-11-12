@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import Biryani from "../pages/Biryani";
 import HotDeals from "../pages/HotDeals";
 import Cart from "../pages/Cart";
+import Menu from "../pages/Menu";
 
 function AllRoutes(){
 
@@ -20,6 +21,7 @@ function AllRoutes(){
                 <Route path="/biryani" element={<Biryani/>}></Route>
                 <Route path="/hotdeals" element={<HotDeals/>}></Route>
                 <Route path="/cart" element={<Cart/>}></Route>
+                <Route path="/menu" element={<Menu/>}></Route>
             </Routes>
         </div>
     )

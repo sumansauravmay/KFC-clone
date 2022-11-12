@@ -34,7 +34,7 @@ function Home(){
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         pauseOnHover: true
       };
 
@@ -81,9 +81,11 @@ src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/image
 </div>
 
 <div style={{marginLeft:"15px"}}>
+<Link to="/chicken">
 <img style={{width:"800px",height:"200px"}}
 src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT201.jpg?ver=21.88" alt="img1"/>
     <h2 style={{fontSize:"20px",fontWeight:"bolder"}}>HOT LUNCHES</h2>
+    </Link>
 </div>
 
 <div style={{marginLeft:"15px"}}>

@@ -4,20 +4,13 @@ import {useNavigate} from "react-router-dom";
 import axios from "axios";
 
 
-
-
 function Login(){
     const navigate = useNavigate();
 
-const [name,setName]=React.useState("")
-const [email,setEmail]=React.useState("")
 const [number,setNumber]=React.useState("")
-const [status,setStatus]=React.useState(false)
 
     const getData={
-        name:name,
-       email:email,
-      number:number 
+       number : number
       }
 
 const handleRegister=()=>{
@@ -28,29 +21,18 @@ const handleRegister=()=>{
     })
     .then((res)=>{
 console.log("res",res)
-setStatus(true)
+
 alert("Sign up successfull")
 
     })
     .catch((err)=>{
-        setStatus(false)
         console.log("err",err)
     })
 }
 
-if(status)
-{
-    return navigate("/")
-}
-
-
-
 const handleHomePage=()=>{
-
     return navigate("/");
  }
-
-
 
     return (
         <>
@@ -67,18 +49,18 @@ const handleHomePage=()=>{
         <Input type="text" value={number} onChange={(e)=>setNumber(e.target.value)}
         style={{width:"35%",marginTop:"100px"}}
         variant='flushed' placeholder='Enter Mobile Number'/>
-<br/>
-<Input type="text" value={name} onChange={(e)=>setName(e.target.value)}
+ <br/>
+{/* <Input type="text" value={name} onChange={(e)=>setName(e.target.value)}
         style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Name'/>
-<br/>
+        variant='flushed' placeholder='Enter Name'/> */}
+{/* <br/>
 <Input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}
         style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Email' />
+        variant='flushed' placeholder='Enter Email' />  */}
 
         <p style={{fontSize:"14px",marginTop:"20px"}}>By “logging in to KFC”, you agree to our Privacy Policy and Terms & Conditions.</p>
 
-        {/* <input type="submit" value="Send Me a Code"/> */}
+    
     <button 
    style={{background:"black",color:"white",width:"200px",height:"40px",margin:"20px",borderRadius:"30px"}}
     onClick={handleRegister}>Send Me Code</button>

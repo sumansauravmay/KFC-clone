@@ -3,6 +3,7 @@ import '../App.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+// import {Alert} from "@chakra-ui/react"
 
 
 const data=[
@@ -43,6 +44,8 @@ const data=[
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
+
+
     return (
       <div
         className={className}
@@ -93,8 +96,13 @@ function Slick(){
             </div>
            
             <div style={{display:"flex",background:"white"}}>
-            <p style={{marginLeft:"10px"}}>{item.title}</p>
-            <button style={{borderRadius:"30px",width:"100px",marginTop:"0px",marginLeft:"70px"}}>
+
+            <p style={{marginLeft:"30px",marginTop:"30px"}} onClick={()=>
+            alert(`${item.description}`)
+            }>{item.title}</p>
+
+            <button 
+            style={{borderRadius:"30px",width:"100px",marginTop:"30px",marginLeft:"70px"}}>
             {item.des}</button>
             </div>
             </div>

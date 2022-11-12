@@ -4,7 +4,7 @@ import { CartContext } from "../Context/CartContext/CartContextProvider";
 import { checkout,removeFromCart } from "../Context/CartContext/action";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-// import {Alert,AlertIcon,AlertDescription,AlertTitle} from "@chakra-ui/react"
+//  import {Alert} from "@chakra-ui/react"
 
 
 const Cart = () => {
@@ -30,7 +30,7 @@ alert("Your order has been placed!!")
 <div className="cartStyle">
 {
     state.map((cart)=>(
-      <div key={cart.id}>
+      <div key={cart.id} className="indiCart">
       <img style={{width:"400px",height:"300px",marginLeft:"150px",marginTop:"80px"
      
       }}
@@ -38,7 +38,7 @@ alert("Your order has been placed!!")
         <h4 style={{fontWeight:"bold",marginTop:"20px"}}>{cart.title}</h4>
         <p style={{fontWeight:"bold",marginTop:"20px"}}> ₹ {cart.price}</p>
         <button style={{width:"100px",background:"black",color:"white",height:"30px",
-        borderRadius:"20px",marginTop:"20px"}}
+        borderRadius:"20px",marginTop:"20px",marginBottom:"10px"}}
          onClick={()=>dispatch(removeFromCart(cart.id))}>Remove</button>
       </div>
       
