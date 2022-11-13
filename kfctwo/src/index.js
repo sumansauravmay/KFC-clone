@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppContextProvider from "./Context/authContext/AuthContextProvider"
 import { BrowserRouter } from "react-router-dom"; 
 import CartContextProvider from "./Context/CartContext/CartContextProvider"
 import { ChakraProvider } from '@chakra-ui/react'
@@ -10,10 +11,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
   <BrowserRouter>
+<AppContextProvider>
   <CartContextProvider>
     <App />
     </CartContextProvider>
-    
+    </AppContextProvider>
     </BrowserRouter>
     </ChakraProvider>
 );

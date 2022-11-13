@@ -10,7 +10,7 @@ const [email,setEmail]=React.useState("");
 const [password,setPassword]=React.useState("");
 const [loading,setLoading]=React.useState(false);
 
-const {loginUser}=React.useContext(AppContest)
+ const {loginUser}=React.useContext(AppContest)
 
 const navigate = useNavigate();
 
