@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.imagest{
+  width:300px;
+  margin-left:"100px";
+  border:"1px solid red" ;
+ 
+}
+.detailsCol{
+  width:50%;
+  margin-left:50px;
+  margin-bottom: "-50px";
+ 
+}
+
+.detailsPage{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,200px);
+  width:1000px;
+  margin-left:210px;
+  margin-top: 80px;
+  
+}
+
+.burgerItem{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+.boxsingleBurger{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ 
+}
+
+.cartStyle{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.indiCart{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
