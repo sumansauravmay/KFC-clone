@@ -29,7 +29,7 @@ function Footer(){
         <div style={{marginLeft:"100px"}}>
         <ul>
                 <li>KFC Food</li>
-                <Link to="/burgers">
+                <Link to="/menu">
                 <li>Menu</li>
                 </Link>
                 <Link to="/cart">

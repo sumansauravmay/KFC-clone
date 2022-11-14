@@ -1,5 +1,5 @@
 import React from "react";
-import {Input,Button,PinInput,PinInputField} from "@chakra-ui/react";
+import {Input,Button,InputRightElement,InputGroup} from "@chakra-ui/react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import logo from "../components/Images/Suman.png"
@@ -10,14 +10,15 @@ import logo from "../components/Images/Suman.png"
 
 function Login(){
     const navigate = useNavigate();
-
+    const [show, setShow] = React.useState(false)
 const [phoneNumber,setPhoneNumber]=React.useState("")
 const [name,setName]=React.useState("")
 const [email,setEmail]=React.useState("")
-const [otp,setOtp]=React.useState()
-
-
+const [otp,setOtp]=React.useState("")
 const [loading,setLoading]=React.useState(false)
+
+
+const handleClick = () => setShow(!show)
 
 
 const getData=()=>{
@@ -36,12 +37,13 @@ setOtp(e.target.value)
 
 const handleOtpFunc=()=>{
     console.log(otp)
-    setOtp(8251)
-    // if(otp===8251)
-    // {
+    console.log(typeof otp)
+    setOtp("8251")
+    if(otp==8251)
+    {
         return navigate("/")
-    // }
-//    alert("wrong")
+    }
+   alert("You put Wrong OTP!")
 }
 
 const handleRegister=()=>{
@@ -104,12 +106,20 @@ const handleHomePage=()=>{
   
       <br/>
       <br/>
-      <PinInput>
-  <PinInputField style={{marginLeft:"10px"}}  onChange={handleOtp}/>
-  <PinInputField style={{marginLeft:"10px"}}  onChange={handleOtp}/>
-  <PinInputField style={{marginLeft:"10px"}} onChange={handleOtp}/>
-  <PinInputField style={{marginLeft:"10px"}} onChange={handleOtp}/>
-</PinInput>
+     
+<InputGroup size='md' style={{width:"35%",marginTop:"30px",marginLeft:"430px"}}>
+      <Input 
+        pr='4.5rem'
+        type={show ? 'text' : 'password'}
+        placeholder='Enter password' value={otp} onChange={handleOtp}
+      />
+      <InputRightElement width='4.5rem'>
+        <Button h='1.75rem' size='sm' onClick={handleClick}>
+          {show ? 'Hide' : 'Show'}
+        </Button>
+      </InputRightElement>
+    </InputGroup>
+
 <br/>
 <br/>
 

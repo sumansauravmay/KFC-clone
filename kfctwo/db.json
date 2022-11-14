@@ -1,11 +1,5 @@
 {
   "register": [
-    {
-      "phoneNumber": "9876456677",
-      "name": "suman saurav",
-      "email": "sumansauravmay12345@gmail.com",
-      "id": 1
-    }
    
   ],
   "hotDeals": [
@@ -513,5 +507,6 @@
       "description": "New flavorful Biryani rice with Popcorn chicken served with a spicy gravy",
       "category": "Biryani"
     }
+   
   ]
 }

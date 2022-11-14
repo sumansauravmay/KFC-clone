@@ -40,7 +40,10 @@ fetch(`https://reqres.in/api/login`,{
 })
 }
 
-
+if(loading)
+{
+    return <img style={{marginLeft:"400px",widht:"200px",height:"500px"}} src="https://online.kfc.co.in/KFC_Loader_Gif.gif" alt="loading"/>
+}
 
 
   return (
