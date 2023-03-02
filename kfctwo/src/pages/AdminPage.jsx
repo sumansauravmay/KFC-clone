@@ -8,6 +8,7 @@ import logo from "../components/Images/Suman.png"
 function AdminPage(){
 const {authState,logoutUser}=React.useContext(AppContest)
 
+
 const [img,setImg]=React.useState("")
 const [title,setTitle]=React.useState("")
 const [price,setPrice]=React.useState()
@@ -20,7 +21,7 @@ const [category,setCategory]=React.useState("")
 const getData=()=>{
   return axios({
       method:"POST",
-      url:"http://localhost:5000/menu",
+      url:"https://wild-puce-dragonfly-belt.cyclic.app/menu",
       data:{img,title,price,description,category}
   })
 }

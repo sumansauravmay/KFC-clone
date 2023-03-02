@@ -8,7 +8,7 @@ import "../App.css";
 import Navbar from "../components/Navbar";
 
 const getData=()=>{
-    return axios.get(`http://localhost:5000/hotDeals`)
+    return axios.get(`https://wild-puce-dragonfly-belt.cyclic.app/hotDeals`)
  }
 
 
