@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 
 
 const getData=()=>{
-    return axios.get(`http://localhost:5000/Burgers`)
+    return axios.get(`https://wild-puce-dragonfly-belt.cyclic.app/Burgers`)
  }
 
 

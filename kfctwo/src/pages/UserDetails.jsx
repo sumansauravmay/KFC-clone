@@ -11,7 +11,7 @@ const [data,setData]=React.useState([])
 
 
 const getData=()=>{
-return axios.get(`http://localhost:5000/register`)
+return axios.get(`https://wild-puce-dragonfly-belt.cyclic.app/register`)
 }
 
 React.useEffect(()=>{

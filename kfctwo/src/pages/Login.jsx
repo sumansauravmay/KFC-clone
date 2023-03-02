@@ -24,7 +24,7 @@ const handleClick = () => setShow(!show)
 const getData=()=>{
     return axios({
         method:"POST",
-        url:"http://localhost:5000/register",
+        url:"https://wild-puce-dragonfly-belt.cyclic.app/register",
         data:{phoneNumber,name,email}
     })
 }

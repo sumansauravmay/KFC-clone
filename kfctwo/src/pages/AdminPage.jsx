@@ -21,7 +21,7 @@ const [category,setCategory]=React.useState("")
 const getData=()=>{
   return axios({
       method:"POST",
-      url:"http://localhost:5000/menu",
+      url:"https://wild-puce-dragonfly-belt.cyclic.app/menu",
       data:{img,title,price,description,category}
   })
 }
