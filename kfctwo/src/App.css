@@ -49,11 +49,12 @@
  
 }
 
-@media screen and (min-width: 1024px) and (max-width:2000px){
+@media screen and (min-width: 1024px){
   .navbarhead{
     display:flex;
     margin-top:30px;
-    width:1200px;
+    width:80%;
+    margin-left: -50px;
   }
 .insidenavleft{
   display:flex;
@@ -65,61 +66,152 @@
   height:50px;
   margin-top:-5px;
 }
+.signinbtn{
+  display:flex;
+  gap:10px;
+  margin-left:400px;
+  margin-top:0px;
+  cursor:pointer;
+}
+.navbarcart{
+  display:flex;
+  gap:10px;
+  margin-left:600px;
+  cursor:pointer;
+  width:100px;
+}
 
 
   .detailsPage{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,200px);
-    width:1000px;
-    margin-left:180px;
-    margin-top: 80px;
+    width:70%;
+    margin:auto;
     
   }
+  .username{
+    margin-left:210px;
+    font-weight:bolder;
+    font-size:20px;
+  }
   .browseclass{
-    margin-left:-620px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     font-weight:bolder;
     font-size:30px;
-    margin-top:80px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 720px) and (max-width:1024px){
-  /* .navbarhead{
+  .navbarhead{
     display:flex;
     margin-top:30px;
-    width:700px;
-    margin-left: -200px;
-  } */
+    width:80%;
+    margin-left: -100px;
+  }
+.insidenavleft{
+  display:flex;
+  margin-left:150px;
+  gap:20px;
+}
+.navbarleftlogo{
+  width:80px;
+  height:50px;
+  margin-top:-5px;
+  margin-right: 20px;
+}
+.signinbtn{
+  display:flex;
+  gap:10px;
+  margin-left:300px;
+  margin-top:0px;
+  cursor:pointer;
+}
+.navbarcart{
+  display:flex;
+  gap:10px;
+  margin-left:400px;
+  cursor:pointer;
+  width:100px;
+}
+
+
   .detailsPage{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,200px);
-    width:500px;
-    margin-left:200px;
-    margin-top: 80px;
+    width:90%;
+    margin:auto;
     
   }
+  .username{
+    margin-left:70px;
+    font-weight:bolder;
+    font-size:20px;
+  }
   .browseclass{
-    margin-left:-300px;
+    margin-bottom: 30px;
+    margin-top: 50px;
     font-weight:bolder;
     font-size:25px;
-    margin-top:80px;
+    text-align: center;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 720px){
+@media screen and (min-width: 300px) and (max-width: 720px){
+  .navbarhead{
+    display:flex;
+    margin-top:30px;
+    margin-left: -10px;
+  }
+.insidenavleft{
+  display:flex;
+  margin-left:50px;
+  gap:20px;
+}
+.navbarleftlogo{
+  width:100px;
+  height:50px;
+  margin-top:-5px;
+}
+.signinbtn{
+  display:flex;
+  gap:10px;
+  margin-left:100px;
+  margin-top:0px;
+  cursor:pointer;
+}
+.navbarcart{
+  display:flex;
+  gap:10px;
+  margin-left:200px;
+  cursor:pointer;
+  width:100px;
+}
+
+
+
+
+
   .detailsPage{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,200px);
-    width:600px;
-    margin-left:80px;
+    width:80%;
+    margin-left:50px;
     margin-top: 80px;
   }
-  .browseclass{
-    margin-left:40px;
+  .username{
+    margin-left:70px;
     font-weight:bolder;
     font-size:20px;
-    margin-top:40px;
+  }
+  .browseclass{
+    font-weight:bolder;
+    font-size:20px;
+    text-align: center;
+    margin-bottom: -30px;
+    margin-top: 50px;
   }
 }
 
