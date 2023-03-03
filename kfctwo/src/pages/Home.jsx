@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+
 const data=[
     {
         id:1,
@@ -65,7 +66,7 @@ getData()
 <Slider {...settings}>
 {
     data.map((item)=>(
-       <div key={item.id}>
+       <div key={item.id} >
 <img style={{marginTop:"50px"}}
 src={item.img} alt="head"/>
        </div>
@@ -85,10 +86,9 @@ src={item.img} alt="head"/>
         }
         </div>
        
-       
 {/* 2nd div */}
         <div>
-        <h1 style={{marginLeft:"-620px",fontWeight:"bolder",fontSize:"30px",marginTop:"80px"}}>BROWSE CATEGORIES</h1>
+        <h1 class="browseclass">BROWSE CATEGORIES</h1>
 
 
 <div className="detailsPage">

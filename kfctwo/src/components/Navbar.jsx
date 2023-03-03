@@ -1,6 +1,7 @@
 import React from "react";
 import { Link,useNavigate } from "react-router-dom";
-import logo from "../components/Images/Suman.png"
+import logo from "../components/Images/Suman.png";
+import '../App.css';
 
 
 
@@ -25,12 +26,10 @@ if(loading)
 }
 
     return (
-        <div style={{display:"flex",marginTop:"30px"}}>
-       <div style={{display:'flex',marginLeft:"200px",gap:"30px"
-       }}>
+        <div className="navbarhead">
+       <div className="insidenavleft">
         <Link to="/">
-            <img 
-           style={{width:"100px",height:"50px",marginTop:"-5px"}}
+            <img className="navbarleftlogo"
             src={logo}
             alt="suman"/>
         </Link>
