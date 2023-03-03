@@ -49,14 +49,78 @@
  
 }
 
-.detailsPage{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(2,200px);
-  width:1000px;
-  margin-left:210px;
-  margin-top: 80px;
-  
+@media screen and (min-width: 1024px) and (max-width:2000px){
+  .navbarhead{
+    display:flex;
+    margin-top:30px;
+    width:1200px;
+  }
+.insidenavleft{
+  display:flex;
+  margin-left:200px;
+  gap:30px;
+}
+.navbarleftlogo{
+  width:100px;
+  height:50px;
+  margin-top:-5px;
+}
+
+
+  .detailsPage{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,200px);
+    width:1000px;
+    margin-left:180px;
+    margin-top: 80px;
+    
+  }
+  .browseclass{
+    margin-left:-620px;
+    font-weight:bolder;
+    font-size:30px;
+    margin-top:80px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width:1024px){
+  /* .navbarhead{
+    display:flex;
+    margin-top:30px;
+    width:700px;
+    margin-left: -200px;
+  } */
+  .detailsPage{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,200px);
+    width:500px;
+    margin-left:200px;
+    margin-top: 80px;
+    
+  }
+  .browseclass{
+    margin-left:-300px;
+    font-weight:bolder;
+    font-size:25px;
+    margin-top:80px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 720px){
+  .detailsPage{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,200px);
+    width:600px;
+    margin-left:80px;
+    margin-top: 80px;
+  }
+  .browseclass{
+    margin-left:40px;
+    font-weight:bolder;
+    font-size:20px;
+    margin-top:40px;
+  }
 }
 
 .burgerItem{

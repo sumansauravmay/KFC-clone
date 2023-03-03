@@ -4,10 +4,6 @@ import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import logo from "../components/Images/Suman.png"
 
-
-
-
-
 function Login(){
     const navigate = useNavigate();
     const [show, setShow] = React.useState(false)

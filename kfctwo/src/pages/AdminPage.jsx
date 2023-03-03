@@ -16,8 +16,6 @@ const [description,setDescription]=React.useState("")
 const [category,setCategory]=React.useState("")
 
 
-
-
 const getData=()=>{
   return axios({
       method:"POST",
@@ -33,15 +31,6 @@ const handleAddProduct=()=>{
     alert("Product added successfully")
   })
 }
-
-
-// "id": 1,
-// "img": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/D-PR00002136.jpg?ver=22.12",
-// "title": "5+5 Bucket",
-// "price": 599.05,
-// "description": "Save 15% on special combo of 5pc Hot & Crispy Chicken + 5 Peri Peri Strips",
-// "category": "Hot Deals"
-
 
     return (
         <div>
