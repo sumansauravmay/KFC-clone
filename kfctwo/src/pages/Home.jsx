@@ -43,10 +43,6 @@ getData()
     setUser(res.data)
 })
 })
-
-
-
-
     var settings = {
         dots: false,
         infinite: true,
@@ -63,7 +59,7 @@ getData()
        
 {/* 1st div */}
 
-<Slider {...settings}>
+{/* <Slider {...settings}>
 {
     data.map((item)=>(
        <div key={item.id} >
@@ -72,10 +68,11 @@ src={item.img} alt="head"/>
        </div>
     ))
 }
-</Slider>
+</Slider> */}
+
 
         <div style={{display:"flex"}}>  
-        <h1 style={{marginLeft:"210px",fontWeight:"bolder",fontSize:"30px"}}>Welcome to KFC</h1>
+        <h1 className="username">Welcome to KFC</h1>
         {
            user.map((el)=>(
             <h1 key={el.id}
