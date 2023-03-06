@@ -103,6 +103,35 @@
     font-size:30px;
     text-align: center;
   }
+
+  .burgerItem{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    
+  }
+  .boxsingleBurger{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+  }
+
+  .headingprod{
+    font-weight:bolder;
+    margin-top:50px;
+    padding:20px;
+    font-size:30px;
+    margin-left:"-1000px"
+  }
+
+  .imgprod{
+    margin-top:50px;
+    width:300px;
+    margin-left:70px;
+  }
+.proddescrip{
+  width:300px;
+  margin-left:70px;
+}
 }
 @media screen and (min-width: 720px) and (max-width:1024px){
   .navbarhead{
@@ -158,6 +187,36 @@
     font-size:25px;
     text-align: center;
   }
+
+
+  .burgerItem{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    
+  }
+  .boxsingleBurger{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+  }
+
+  .headingprod{
+    font-weight:bolder;
+    margin-top:50px;
+    padding:20px;
+    font-size:30px;
+   
+  }
+
+  .imgprod{
+    margin-top:50px;
+    width:300px;
+    margin-left:70px;
+  }
+.proddescrip{
+  width:300px;
+  margin-left:70px;
+}
 }
 @media screen and (min-width: 300px) and (max-width: 720px){
   .navbarhead{
@@ -214,17 +273,31 @@
     margin-bottom: -30px;
     margin-top: 50px;
   }
-}
 
-.burgerItem{
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  
-}
-.boxsingleBurger{
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
- 
+
+
+  .burgerItem{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    
+  }
+  .boxsingleBurger{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
+  }
+  .headingprod{
+    font-weight:bolder;
+    margin-top:50px;
+    padding:20px;
+    font-size:30px;
+   
+  }
+  .imgprod{
+    margin-top:50px;
+    width:500px;
+    margin-left:70px;
+  }
 }
 
 .cartStyle{
