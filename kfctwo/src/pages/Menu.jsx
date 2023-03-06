@@ -44,8 +44,7 @@ if(loading)
         <div>
         <Navbar/>
 
-         <h1 style={{fontWeight:"bolder",marginTop:"50px",padding:"20px",
-         fontSize:"30px",marginLeft:"-1000px"}}>MENU</h1>
+         <h1 className="headingprod">MENU</h1>
         <div className="burgerItem">
        
             {
@@ -54,14 +53,14 @@ if(loading)
                     
                     >
 
-                        <img style={{marginTop:"50px",width:"300px",marginLeft:"70px"}}
+                        <img className="imgprod"
                         src={item.img} alt="burgers"/>
 
                         <h1 style={{marginTop:"30px",fontWeight:"bolder"}}>{item.title}</h1>
 
                         <h2 style={{fontWeight:"bolder",marginTop:"10px"}}>₹ {item.price}</h2>
 
-                        <p style={{width:"300px",marginLeft:"70px"}}>{item.description}</p>
+                        <p className="proddescrip">{item.description}</p>
 
                         <button style={{width:"140px",background:"red",color:"white",height:"50px",
                         padding:"10px",borderRadius:"20px",marginTop:"20px",marginBottom:"15px"}}
