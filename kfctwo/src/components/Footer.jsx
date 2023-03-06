@@ -6,7 +6,7 @@ import {
   Stack,
   Text,
   Flex,
-  Tag,
+  // Tag,
   useColorModeValue,Image
 } from '@chakra-ui/react';
 import {Link} from "react-router-dom";
