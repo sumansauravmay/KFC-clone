@@ -13,6 +13,7 @@ import AdminPage from "../pages/AdminPage";
 import UserDetails from "../pages/UserDetails";
 import Registration from "../pages/Registration";
 import Otp from "../pages/Otp";
+import Payment from "../pages/Payment";
 
 
 function AllRoutes(){
@@ -28,8 +29,9 @@ function AllRoutes(){
                 <Route path="/chicken" element={<Chicken/>}></Route>
                 <Route path="/biryani" element={<Biryani/>}></Route>
                 <Route path="/hotdeals" element={<HotDeals/>}></Route>
-                <Route path="/cart" element={<Cart/>}></Route>
                 <Route path="/menu" element={<Menu/>}></Route>
+                <Route path="/cart" element={<Cart/>}></Route>
+                <Route path="/payment" element={<Payment/>}></Route>
                 <Route path="/adminlogin" element={<AdminLogin/>}></Route>
                 <Route path="/adminpage" element={<AdminPage/>}></Route>
                

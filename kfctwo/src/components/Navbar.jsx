@@ -36,6 +36,8 @@ const logoutfunc=()=>{
   
 }
 
+let totalamount=JSON.parse(localStorage.getItem("amount"))||"";
+
     return (
         <div className="navbarhead">
        <div className="insidenavleft">
@@ -65,7 +67,7 @@ const logoutfunc=()=>{
        
         <div className="navbarcart"
         onClick={carthandle}>
-        <p style={{color:"black",marginTop:"-20px",fontWeight:"bold"}}>₹ 0</p>
+        <p style={{color:"black",marginTop:"-20px",fontWeight:"bold"}}>₹ {totalamount}</p>
             <img style={{width:"50px",height:"50px",marginTop:"-30px"}}
             src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" 
             alt="cart"/>
