@@ -11,6 +11,8 @@ import Menu from "../pages/Menu";
 import AdminLogin from "../pages/AdminLogin";
 import AdminPage from "../pages/AdminPage";
 import UserDetails from "../pages/UserDetails";
+import Registration from "../pages/Registration";
+import Otp from "../pages/Otp";
 
 
 function AllRoutes(){
@@ -20,6 +22,8 @@ function AllRoutes(){
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/login" element={<Login/>}></Route>
+                <Route path="/registration" element={<Registration/>}></Route>
+                <Route path="/otp" element={<Otp/>}></Route>
                 <Route path="/burgers" element={<Burgers/>}></Route>
                 <Route path="/chicken" element={<Chicken/>}></Route>
                 <Route path="/biryani" element={<Biryani/>}></Route>

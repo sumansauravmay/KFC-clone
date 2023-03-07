@@ -21,8 +21,11 @@ getData()
     console.log(res.data)
     setUser(res.data)
 })
-})
+},[])
    
+let userdata=JSON.parse(localStorage.getItem("signin"))||"";
+
+
     return (
         <div>
 <Navbar/>
@@ -31,20 +34,22 @@ getData()
 
 <Sliderfirst/>
         <div style={{display:"flex"}}>  
-        <h1 className="username">Welcome to KFC</h1>
-        {
+        <h1 className="username">Welcome to KFC {userdata}</h1>
+        {/* {
            user.map((el)=>(
-            <h1 key={el.id}
-            style={{marginLeft:"0px",fontWeight:"bolder",fontSize:"30px"}}>
-            , {el.name}
+            <div key={el.id}>
+            <h1 
+            style={{marginTop:"-5px",fontWeight:"bolder",fontSize:"25px"}}>
+            , {el.firstName}userdata
         </h1>
+        </div>
            )) 
-        }
+        } */}
         </div>
        
 {/* 2nd div */}
         <div>
-        <h1 class="browseclass">BROWSE CATEGORIES</h1>
+        <h1 className="browseclass">BROWSE CATEGORIES</h1>
 
 
 <div className="detailsPage">

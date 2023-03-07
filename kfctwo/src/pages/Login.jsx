@@ -1,139 +1,193 @@
-import React from "react";
-import {Input,Button,InputRightElement,InputGroup} from "@chakra-ui/react";
-import {useNavigate} from "react-router-dom";
-import axios from "axios";
-import logo from "../components/Images/Suman.png"
+import React from 'react';
+import {
+    Flex,
+    Box,
+    FormControl,
+    FormLabel,
+    Input,
+    InputGroup,
+    
+    InputRightElement,
+    Stack,
+    Button,
+    Heading,
+    Text,
+    useColorModeValue,
+   
+  } from '@chakra-ui/react';
+  import { useState } from 'react';
+  import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+  import { Link,useNavigate } from 'react-router-dom';
+   import axios from 'axios';
+   import { useToast } from '@chakra-ui/react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+  
 
-function Login(){
-    const navigate = useNavigate();
-    const [show, setShow] = React.useState(false)
-const [phoneNumber,setPhoneNumber]=React.useState("")
-const [name,setName]=React.useState("")
-const [email,setEmail]=React.useState("")
-const [otp,setOtp]=React.useState("")
-const [loading,setLoading]=React.useState(false)
+const Login = () => {
+    const [showPassword, setShowPassword] = useState(false);
+    const [mobile,setMobile]=useState();
+    const [otp,setOtp]=useState("");
 
-
-const handleClick = () => setShow(!show)
+    const navigate=useNavigate()
+    const toast = useToast()
+    const status = [ 'warning'];
 
 
 const getData=()=>{
-    return axios({
-        method:"POST",
-        url:"https://wild-puce-dragonfly-belt.cyclic.app/register",
-        data:{phoneNumber,name,email}
-    })
+    return axios.get(`https://wild-puce-dragonfly-belt.cyclic.app/register`)
 }
 
-
-
-const handleOtp=(e)=>{
-setOtp(e.target.value)
-}
-
-const handleOtpFunc=()=>{
-    console.log(otp)
-    console.log(typeof otp)
-    setOtp("8251")
-    if(otp==8251)
-    {
-        return navigate("/")
-    }
-   alert("You put Wrong OTP!")
-}
-
-const handleRegister=()=>{
-    setLoading(true)
-   
+    const handleLogin=(e)=>{
+        e.preventDefault()
 getData()
-    .then((res)=>{
-console.log("res",res)
-setLoading(false)
-alert(`Your OTP is 8251`)
+.then((res)=>{
+    checkcredentials(res.data)
+    let x=res.data[(res.data).length-1]
+    localStorage.setItem("signin",JSON.stringify(x.firstName))
+})
 
-    })
-    .catch((err)=>{
-        console.log("err",err)
-    })
+    }
+
+    const checkcredentials=(data)=>{
+        let filtered=data.filter((el)=>{
+          return el.mobile==mobile
+        })
+        return finalcheck(filtered)
+      }
+       
+      const finalcheck=(filtered)=>{
+        if(filtered.length>0){
+        toast({
+          title: 'Your OTP is 987654',
+          description: "Please Put OTP Carefully.",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })
+       
+         } 
+         else
+         {
+          toast({
+            title: `Mobile Number not registered`,
+            status: status,
+            isClosable: true,
+          })
+
+
+         }
+      }
+
+const handleOtpPart=(e)=>{
+e.preventDefault()
+if(otp==="987654")
+{
+  toast({
+    title: 'Login Successful',
+    description: "We've created your account for you.",
+    status: 'success',
+    duration: 9000,
+    isClosable: true,
+  })
+  navigate("/")
+}
+else{
+  toast({
+    title: 'You put wrong OTP',
+    description: "Please Put right OTP",
+    status: 'success',
+    duration: 9000,
+    isClosable: true,
+  })
+}
+ 
+
 }
 
-const handleHomePage=()=>{
-    return navigate("/");
- }
+  return (
+    <>
+<Navbar/>
+    <Flex
+    minH={'100vh'}
+    align={'center'}
+    justify={'right'}
+    bg={useColorModeValue('gray.50', 'gray.800')}>
+    <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+      <Stack align={'center'}>
+        <Heading fontSize={'xl'} textAlign={'center'}> 
+          Sign in
+        </Heading>
+      </Stack>
+      <Box
+        rounded={'lg'}
+        bg={useColorModeValue('white', 'gray.700')}
+        boxShadow={'lg'}
+        p={8}>
+        <Stack spacing={4}>
+          <FormControl id="email" isRequired>
+            <FormLabel>Mobile Number</FormLabel>
+            <Input type="email" value={mobile} onChange={(e)=>setMobile(e.target.value)} isRequired/>
+          </FormControl>
+         
+          <Stack spacing={10} pt={2}>
+            <Button onClick={handleLogin}
+              loadingText="Submitting"
+              size="lg"
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Sign in
+            </Button>
+          </Stack>
+          
 
- if(loading)
- {
-  return <img 
-  style={{marginLeft:"400px",widht:"200px",height:"500px"}} 
-  src="https://online.kfc.co.in/KFC_Loader_Gif.gif" alt="loading"/>
- }
+          <FormControl id="otpw" isRequired>
+            <FormLabel>OTP</FormLabel>
+            <InputGroup>
+              <Input type={showPassword ? 'text' : 'password'} value={otp}
+                onChange={(e)=>setOtp(e.target.value)} isRequired
+              />
+              <InputRightElement h={'full'}>
+                <Button
+                  variant={'ghost'}
+                  onClick={() =>
+                    setShowPassword((showPassword) => !showPassword)
+                  }>
+                  {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+          </FormControl>
+          <Stack spacing={10} pt={2}>
+            <Button onClick={handleOtpPart}
+              loadingText="Submitting"
+              size="lg"
+              bg={'red.400'}
+              color={'white'}
+              _hover={{
+                bg: 'red.500',
+              }}>
+              Verify
+            </Button>
+          </Stack>
 
+        </Stack>
 
-    return (
-        <>
-            <p style={{fontWeight:"bold",marginTop:"20px"}}>Sign in / sign up</p>
+        <Stack pt={6}>
+            <Text align={'center'}>
+              Not a user? <Link  to="/registration" color={'blue.400'}>Register</Link>
+            </Text>
+          </Stack>
 
-        <img style={{marginLeft:"550px",marginTop:"40px",height:"200px"}}
-         src={logo} alt="kfc"/>
-   
-        <h1 style={{fontWeight:"bold",fontSize:"20px",width:"550px",marginLeft:"400px",marginTop:"30px"}}>
-        LET'S SIGN IN OR CREATE ACCOUNT WITH YOUR PHONE NUMBER!</h1>
-
-        
-
-        <Input type="number" value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)}
-        style={{width:"35%",marginTop:"100px"}}
-        variant='flushed' placeholder='Enter Mobile Number'/>
- <br/>
-<Input type="text" value={name} onChange={(e)=>setName(e.target.value)}
-        style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Name'/> 
-<br/>
-<Input type="text" value={email} onChange={(e)=>setEmail(e.target.value)}
-        style={{width:"35%",marginTop:"40px"}}
-        variant='flushed' placeholder='Enter Email' /> 
-
- <p style={{fontSize:"14px",marginTop:"20px"}}>By “logging in to KFC”, you agree to our Privacy Policy and Terms & Conditions.</p>
-
-    
-    <button 
-   style={{background:"black",color:"white",width:"200px",height:"40px",margin:"20px",borderRadius:"30px"}}
-    onClick={handleRegister}>Send Me Code</button>
-  
-      <br/>
-      <br/>
-     
-<InputGroup size='md' style={{width:"35%",marginTop:"30px",marginLeft:"430px"}}>
-      <Input 
-        pr='4.5rem'
-        type={show ? 'text' : 'password'}
-        placeholder='Enter password' value={otp} onChange={handleOtp}
-      />
-      <InputRightElement width='4.5rem'>
-        <Button h='1.75rem' size='sm' onClick={handleClick}>
-          {show ? 'Hide' : 'Show'}
-        </Button>
-      </InputRightElement>
-    </InputGroup>
-
-<br/>
-<br/>
-
-<button 
-   style={{background:"black",color:"white",width:"200px",height:"40px",margin:"20px",borderRadius:"30px"}}
-    onClick={handleOtpFunc}>Enter OTP</button>
-  
-
-       <p style={{marginTop:"20px"}}>or</p>
-
-<Button style={{background:"white",marginTop:"20px",color:"black",borderRadius:"20px",
-border:"1px solid black",width:"500px"}} onClick={handleHomePage}>
-Skip, Continue As Guest</Button>
-
-
-
-
-        </>
-    )
+      </Box>
+    </Stack>
+  </Flex>
+  <Footer/>
+  </>
+  )
 }
-export default Login;
+
+export default Login
