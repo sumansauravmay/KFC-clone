@@ -62,29 +62,14 @@ setData(res.data)
 >
   Logout
 </Button>
-</Link>
-
-{/* "phoneNumber": "9876456677",
-      "name": "suman saurav",
-      "email": "sumansauravmay12345@gmail.com",
-      "id": 1 */}
-
-
-
-                {/* <thead>
-                    <tr>
-                        <th>Phone Number</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        
-                    </tr>
-                </thead> */}
+</Link>         
                 <div>
                 
                     {data.map((item) => (
                         <div key={item.id}>
-                        <h3 style={{fontWeight:"bold",fontSize:"20px"}}>Name : {item.name}</h3>
-                        <h3>Phone Number : {item.phoneNumber}</h3>
+                        <h3 style={{fontWeight:"bold",fontSize:"20px"}}>First Name : {item.firstName}</h3>
+                        <h3 style={{fontWeight:"bold",fontSize:"20px"}}>Last Name : {item.lastName}</h3>
+                        <h3>Phone Number : {item.mobile}</h3>
                        
                         <h3>Email : {item.email}</h3>
                         </div>

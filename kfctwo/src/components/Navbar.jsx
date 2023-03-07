@@ -8,6 +8,10 @@ import '../App.css';
 function Navbar(){
 const [loading,setLoading]=React.useState(false)
 
+
+let userdata=JSON.parse(localStorage.getItem("signin"))||"";
+console.log(userdata)
+
 const navigate=useNavigate()
 
 const carthandle=()=>{
@@ -17,12 +21,19 @@ const carthandle=()=>{
 const loginhandle=()=>{
     setLoading(true)
   
+  
     return navigate("/login")
 }
 
 if(loading)
 {
     return <h1>...Loading</h1>
+}
+
+const logoutfunc=()=>{
+    localStorage.removeItem("signin")
+  window.location.reload()
+  
 }
 
     return (
@@ -37,16 +48,20 @@ if(loading)
         <Link to="/hotdeals" style={{color:"black",fontWeight:"bold"}}>Deals</Link>
        </div>
 
-     
        <div>
+    <button onClick={logoutfunc}
+    style={{marginLeft:"20px",fontWeight:"bolder"}}>{userdata?"Logout":""}</button>
+</div>
+
+       <div>
+
         
             <div className="signinbtn" 
             onClick={loginhandle}>
                 <img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt="login"/>
-                <h4 style={{color:"black",fontWeight:"bold"}}>Sign In</h4>
+                <h4 style={{color:"black",fontWeight:"bold"}}>{userdata?userdata:"Sign in"}</h4>
             </div>
        
-
        
         <div className="navbarcart"
         onClick={carthandle}>

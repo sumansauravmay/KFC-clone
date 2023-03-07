@@ -113,12 +113,11 @@ const Sliderfooter = () => {
 
   return (
     <div>
-    <div class="firstdiv">
+    <div className="firstdiv">
     <Slider {...settings}>
   {
     data.map((item)=>(
     <Box key={item._id}  h="250px" mt="200px"
-    //  boxShadow="rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px"
      >
     <Box  boxSize='300px' mt="5px"
      ml={{base:"70px",md:"75px",lg:"75px"}}
@@ -126,7 +125,6 @@ const Sliderfooter = () => {
     <Image
   width={{base:"250px",md:"300px",lg:"300px"}}
   height={{base:"250px",md:"200px",lg:"200px"}}
-// margin={{md:"auto"}}
   src={item.image} alt='Dan Abramov' />
 </Box>
 
