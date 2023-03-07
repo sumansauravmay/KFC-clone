@@ -83,7 +83,7 @@ On this page, you have to login with your registered email and password .you can
 
 Here users can browse, `filter` the product based on `brand and discound`, `sort` by `price or rating`, filter and sort will work togather and add items to the cart by clicking on the `Add to Cart` button.
  
- ![product](https://user-images.githubusercontent.com/105916064/213938969-0fdb0fa7-dac5-4d44-b285-53032655c9f8.png)
+ ![product](https://i.postimg.cc/SKBgp0yp/product1.jpg)
 
 ### Cart Page -
 
@@ -98,6 +98,18 @@ Here all the products added to the cart will be shown. On this page, By Clicking
 On This Page there is info about the site....
 
 ![footer](https://i.postimg.cc/qvXJKr51/footer.jpg)
+
+### Admin Login -
+
+On This Page there is login page for admin....
+
+![Admin Login](https://i.postimg.cc/mkJY7CtW/adminlogin.jpg)
+
+### Admin Page -
+
+On This Page there is info of admin and product...
+
+![Admin Page](https://i.postimg.cc/XqkGxPNW/adminpage.jpg)
 
 
 ## Run Locally
