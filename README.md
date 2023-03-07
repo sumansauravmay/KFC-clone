@@ -53,7 +53,7 @@ KFC is an American fast food restaurant chain headquartered in Louisville, Kentu
 
 ## 🚀 Team Member:-
 
--   Suman Sourav [[LinkedIn Profile](https://www.linkedin.com/in/suman-saurav-06896b231/)] [[Github Profile](https://github.com/sumansauravmay/)]
+-   Suman Saurav [[LinkedIn Profile](https://www.linkedin.com/in/suman-saurav-06896b231/)] [[Github Profile](https://github.com/sumansauravmay/)]
 
 
 
